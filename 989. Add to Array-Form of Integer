@@ -1,0 +1,20 @@
+class Solution {
+    public List<Integer> addToArrayForm(int[] num, int k) {
+        LinkedList<Integer> out = new LinkedList<>();
+        int carry = k;
+        int n = num.length;
+
+        for(int i = n - 1; i >= 0; i--){
+            int sum = num[i] + carry;
+            out.addFirst(sum % 10);
+            carry = sum / 10;
+        }
+
+        while(carry > 0){
+            out.addFirst(carry % 10);
+            carry = carry/10;
+        }
+
+        return out;
+    }
+}
