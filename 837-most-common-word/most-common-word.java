@@ -5,7 +5,7 @@ class Solution {
         String [] words = paragraph.split(" ");
 
         for(String word: words){
-            word = word.replace("'","").replace("?","").replace("?","").replace(".","").replace("!","").replace(";","").toLowerCase();
+            word = word.replace("'","").replace("?","").replace(".","").replace("!","").replace(";","").toLowerCase();
             map.put(word, map.getOrDefault(word, 0)+1);
         }
         int max = 0;
