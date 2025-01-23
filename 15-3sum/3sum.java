@@ -4,6 +4,9 @@ class Solution {
         int n = arr.length;
         List<List<Integer>> ans = new ArrayList<>();
         for(int i = 0; i < n; i++){
+            if(arr[i] > 0){
+                break;
+            }
             if (i != 0 && arr[i] == arr[i - 1]) continue;
             int j = i + 1;
             int k = n - 1;
