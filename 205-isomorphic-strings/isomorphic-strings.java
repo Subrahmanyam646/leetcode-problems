@@ -3,8 +3,8 @@ class Solution {
         if(s.length() != t.length()) return false;
         int [] map1 = new int[200];
         int [] map2 = new int[200];
-
-        for(int i= 0; i <s.length(); i++){
+        int n = s.length();
+        for(int i= 0; i <n; i++){
             if(map1[s.charAt(i)]!=map2[t.charAt(i)])
                 return false;
 
